@@ -27,7 +27,7 @@
 #grid_catalogo{
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 110px 1300px 150px ;
+    grid-template-rows: 110px 2000px 150px ;
     grid-template-areas:"nav"
                         "main"
                         "footer";
@@ -37,7 +37,7 @@
 #grid_registro{
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 110px 1300px 150px ;
+    grid-template-rows: 110px 1000px 150px ;
     grid-template-areas:"nav"
                         "main"
                         "footer";
@@ -50,6 +50,8 @@
 
 
 /* NAV */
+
+/*  
 
 nav{
     background-color: rgb(109, 16, 16);
@@ -70,18 +72,70 @@ ul{
 }
 
 
-
-.navbar_img{
+/*.navbar_img{
     display: inline-block;
     vertical-align: middle;
     width: 145px;
+}  
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+nav{
+    background: #a72c10;
+    height: 80px;
+    width: 100%;
+}
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+.logo{
+    height: 40px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+li a.active, li a:hover{
+    background: #dcc82b;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
 }
 
 
-#icon-car{
-    display: inline-block;
-    vertical-align: middle;
-    width: 80px;
+
+a:hover{
+    color: black;
 }
 
 
@@ -169,7 +223,6 @@ section{
 
 
 .img_carrito{
-    width: 350px;
     grid-area: img;
 }
 
@@ -223,6 +276,10 @@ img{
     background-color: white;
     height: 80%;
     width: 30%;
+}
+
+.catalogo{
+    margin-top: 150px;
 }
 
 
@@ -344,4 +401,70 @@ footer a{
 
 footer{
     background-color: rgb(109, 16, 16);
+}
+
+
+
+
+/* MEDIA QUERIES */
+
+
+
+
+
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #c1be0b;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: red;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
+
+
+@media screen and (max-width:767px){
+
+    
+}
+
+
+
+@media screen and (min-width:767px) and (max-width:1023px){
+
+}
+
+
+@media screen and (min-width:1024px){
+
 }

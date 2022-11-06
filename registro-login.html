@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <title>Refaccionaria San Pedro</title>
 </head>
@@ -13,30 +14,22 @@
 
     <div id="grid_registro">
             <nav>
-                <ul>
-                        <a  href="index.html">
-                            <img class="navbar_img"src="img/logo_nav.png" alt="">
-                        </a>
-                        
-                    <li>
-                        <a href="index.html">Inicio</a>
-                    </li>
-                    <li>
-                        <a href="catalogo.html">Catalogo</a>
-                    </li>
-                    <li>
-                        <a href="registro-login.html">¿Quieres comprar?</a>
-                    </li>
-                    <li>
-                        <a href="contactanos.html">Contacto</a>
-                    </li>
-                    <li>
-                        <a class="navbar_img" href="carrito.html">
-                            <img id="icon-car" src="img/carrito-de-compras.png" alt="">
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+                <nav>
+                    <input type="checkbox" id="check">
+                    <label for="check" class="checkbtn">
+                        <i class="fas fa-bars"></i>
+                    </label>
+                    <a href="index.html" class="enlace">
+                        <img src="img/logo_nav.png" alt="" class="logo">
+                    </a>
+                    <ul>
+                        <li><a class="active" href="index.html">Inicio</a></li>
+                        <li><a href="catalogo.html">Catalogo</a></li>
+                        <li><a href="registro-login.html">¿Quieres comprar?</a></li>
+                        <li><a href="contactanos.html">Contacto</a></li>
+                        <li><a href="carrito.html">Carrito</a></li>
+                    </ul>
+                </nav>
         <main>
             <h1>¿Quieres comprar?</h1>
             
@@ -76,7 +69,7 @@
 
         </main>
         <footer>
-    
+            Derechos Reservados <a href="">Refaccionaria San pedro</a>
         </footer>
 
 
